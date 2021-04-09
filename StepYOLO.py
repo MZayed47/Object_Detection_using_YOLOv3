@@ -173,12 +173,12 @@ def draw_boxes(filename, v_boxes, v_labels, v_scores):
 		# calculate width and height of the box
 		width, height = x2 - x1, y2 - y1
 		# create the shape
-		rect = Rectangle((x1, y1), width, height, fill=False, color='yellow')
+		rect = Rectangle((x1, y1), width, height, fill=False, color='red')
 		# draw the box
 		ax.add_patch(rect)
 		# draw text and score in top left corner
 		label = "%s (%.3f)" % (v_labels[i], v_scores[i])
-		pyplot.text(x1, y1, label, color='yellow')
+		pyplot.text(x1, y1, label, color='red')
 	# show the plot
 	pyplot.show()
 
@@ -192,7 +192,7 @@ input_w, input_h = 416, 416
 
 
 # define our new photo
-photo_filename = 'Cars.jpg'
+photo_filename = 'dog.jpg'
 
 
 # load and prepare image
